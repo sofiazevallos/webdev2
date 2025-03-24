@@ -1,0 +1,68 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the page */
+    margin: 20px; /* Adds some margin around the content */
+    background-color: #f4f4f4; /* Light grey background for the page */
+}
+
+/* Grid Container Styles */
+#gridContainer {
+    width: 100%; /* Full width to contain the grid */
+    max-width: 960px; /* Maximum width of the grid container */
+    margin: 0 auto; /* Centers the container horizontally */
+    background-color: #fff; /* White background for the grid */
+    border: 2px solid #ccc; /* Grey border for the grid */
+    padding: 10px; /* Padding inside the grid */
+    overflow: auto; /* Adds scrollbars if the content is bigger than the container */
+}
+
+/* Grid Cell Styles */
+.grid-cell {
+    width: 60px; /* Width of each cell */
+    height: 60px; /* Height of each cell */
+    border: 1px solid #ddd; /* Light grey border for each cell */
+    float: left; /* Aligns cells to the left */
+    text-align: center; /* Centers text in the cell */
+    vertical-align: middle; /* Aligns text vertically in the middle */
+    line-height: 60px; /* Line height to vertically center the text */
+}
+
+/* Clearfix hack for the floating cells */
+#gridContainer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Dropdown Menu Styles */
+select {
+    padding: 8px 12px; /* Padding inside the dropdown */
+    margin-bottom: 20px; /* Space below the dropdown */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Grey border */
+}
+
+/* Button Styles */
+button {
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+    margin: 5px; /* Margin around the button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input Field Styles (e.g., for color pickers) */
+input[type="color"],
+input[type="text"] {
+    padding: 8px; /* Padding inside the input */
+    margin-right: 10px; /* Margin to the right of the input */
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 4px; /* Rounded corners */
+}
