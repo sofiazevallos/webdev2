@@ -40,11 +40,27 @@ function colorCell(cellId, color) {
     console.log(`Cell ${cellId} colored with ${color}`);
 }
 
-// Colors all uncolored cells with the selected color
-function colorAllUncoloredCells(color) {
-    // Placeholder for coloring all uncolored cells
-    console.log("All uncolored cells colored with", color);
+// Assume selectedColor is globally available
+let selectedColor = '#FFFFFF'; // Default to white or any initial color
+
+// Function to color all uncolored cells in the grid
+function colorAllUncoloredCells() {
+    const gridCells = document.querySelectorAll('.grid-cell');
+    gridCells.forEach(cell => {
+        // Check if the cell is uncolored; assuming 'uncolored' means default or white background
+        if (!cell.style.backgroundColor || cell.style.backgroundColor === 'white' || cell.style.backgroundColor === 'rgb(255, 255, 255)') {
+            cell.style.backgroundColor = selectedColor;
+        }
+    });
+    console.log('All uncolored cells are now colored with:', selectedColor);
 }
+
+// Function to update the selected color from a color picker or dropdown
+function updateSelectedColor(newColor) {
+    selectedColor = newColor;
+    console.log('Selected color updated to:', selectedColor);
+}
+
 
 // Colors all cells with the selected color
 function colorAllCells(color) {
