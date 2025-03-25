@@ -28,11 +28,29 @@ function removeColumn() {
     console.log("Column removed from the grid");
 }
 
-// Selects a color from a dropdown menu of colors
-function selectColor() {
-    // Placeholder for selecting a color
-    console.log("Color selected from dropdown");
+// Global variable to hold the selected color
+let selectedColor = '#FFFFFF'; // Default color
+
+// Function to setup the color selection menu
+function setupColorMenu() {
+    const colorMenu = document.getElementById('colorMenu');
+    
+    colorMenu.addEventListener('change', function() {
+        selectedColor = this.value;
+        console.log('Color selected:', selectedColor);
+        // Optional: Update the UI or apply the color immediately
+        // applyColorToGrid(selectedColor); // If you want to apply it directly
+    });
 }
+
+// Example function to apply the color to a grid or element
+function applyColorToGrid(color) {
+    const gridCells = document.querySelectorAll('.grid-cell');
+    gridCells.forEach(cell => {
+        cell.style.backgroundColor = color;
+    });
+}
+
 
 // Colors a single cell
 function colorCell(cellId, color) {
