@@ -36,7 +36,10 @@ function selectColor() {
 
 // Colors a single cell
 function colorCell(cellId, color) {
-    // Placeholder for coloring a specific cell
+    const cell = document.getElementById(cellId);
+    if (cell) {
+        cell.style.backgroundColor = color;
+    }
     console.log(`Cell ${cellId} colored with ${color}`);
 }
 
