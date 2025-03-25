@@ -48,7 +48,11 @@ function colorAllUncoloredCells(color) {
 
 // Colors all cells with the selected color
 function colorAllCells(color) {
-    // Placeholder for coloring all cells
+    const gridCells = document.querySelectorAll('.grid-cell');
+    gridCells.forEach(cell => {
+        cell.style.backgroundColor = selectedColor;
+    });
+    console.log('All cells are now colored with:', selectedColor);
     console.log("All cells colored with", color);
 }
 
