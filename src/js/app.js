@@ -60,7 +60,12 @@ function removeRow() {
 
 // Removes columns from the grid
 function removeColumn() {
-    // Placeholder for removing a column from the grid
+    const grid = document.getElementById('gridContainer');
+    if (grid.rows[0].cells.length > 0) {
+        for (const row of grid.rows) {
+            row.deleteCell(-1); // Remove the last cell from each row
+        }
+    }
     console.log("Column removed from the grid");
 }
 
