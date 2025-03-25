@@ -6,7 +6,13 @@ function selectAction() {
 
 // Adds rows to the grid
 function addRow() {
-    // Placeholder for adding a row to the grid
+    const grid = document.getElementById('gridContainer');
+    const newRow = grid.insertRow(-1); // Insert a row at the end of the table
+    const cols = grid.rows[0].cells.length;
+    for (let i = 0; i < cols; i++) {
+        const newCell = newRow.insertCell(i);
+        newCell.innerHTML = 'New Cell'; // Or other default content
+    }
     console.log("Row added to the grid");
 }
 
