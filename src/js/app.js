@@ -18,7 +18,10 @@ function addColumn() {
 
 // Removes rows from the grid
 function removeRow() {
-    // Placeholder for removing a row from the grid
+    const grid = document.getElementById('gridContainer');
+    if (grid.rows.length > 0) {
+        grid.deleteRow(-1); // Remove the last row
+    }
     console.log("Row removed from the grid");
 }
 
