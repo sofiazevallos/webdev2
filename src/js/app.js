@@ -54,7 +54,10 @@ function colorAllCells(color) {
 
 // Clears all cells' color and restore all cells to their initial color (e.g., white)
 function clearColor() {
-    // Placeholder for clearing all cells' color
+    const cells = document.querySelectorAll('#gridContainer td');
+    for (const cell of cells) {
+        cell.style.backgroundColor = 'white'; // Resetting to white or any default color
+    }
     console.log("All cells' colors cleared");
 }
 
