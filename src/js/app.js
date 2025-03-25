@@ -1,7 +1,30 @@
-// Selects an action from a dropdown menu
-function selectAction() {
-    // Placeholder for selecting an action
-    console.log("Action selected from dropdown menu");
+// Function to handle action selection from a dropdown menu
+function setupActionMenu() {
+    const actionMenu = document.getElementById('actionMenu');
+    
+    actionMenu.addEventListener('change', function() {
+        const selectedAction = this.value;
+        
+        switch (selectedAction) {
+            case 'addRow':
+                addRow();
+                break;
+            case 'removeRow':
+                removeRow();
+                break;
+            case 'addColumn':
+                addColumn();
+                break;
+            case 'removeColumn':
+                removeColumn();
+                break;
+            case 'clearColor':
+                clearColor();
+                break;
+            default:
+                console.log('No valid action selected');
+        }
+    });
 }
 
 // Adds rows to the grid
