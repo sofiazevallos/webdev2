@@ -41,7 +41,11 @@ function addRow() {
 
 // Adds columns to the grid
 function addColumn() {
-    // Placeholder for adding a column to the grid
+    const grid = document.getElementById('gridContainer');
+    for (const row of grid.rows) {
+        const newCell = row.insertCell(-1); // Insert a cell at the end of each row
+        newCell.innerHTML = 'New Column'; // Or other default content
+    }
     console.log("Column added to the grid");
 }
 
